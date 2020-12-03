@@ -8,13 +8,21 @@
 		url("../img/hero.jpeg");
 	background-size: cover;
 	background-position: center;
-	padding: 5rem;
+	padding: 8rem;
 	padding-top: 2rem;
 	display: grid;
 	grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
 	grid-template-columns: minmax(min-content, max-content);
 	grid-row-gap: 1.5rem;
 	justify-content: center;
+
+	@media only screen and (max-width: $bp-md) {
+		grid-column: full-start / full-end;
+	}
+
+	@media only screen and (max-width: $bp-sm) {
+		padding: 5rem;
+	}
 
 	&__logo {
 		height: 3rem;
